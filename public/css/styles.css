@@ -1,0 +1,99 @@
+body {
+	font-family:arial, sans-serif;
+	margin:auto;
+}
+a {
+	text-decoration: none;
+	color:#f00;
+}
+a:hover {
+	color:#555;
+}
+section {
+	display:flex;
+}
+.left {
+	flex:2;
+	height:100vh;
+	overflow:auto;
+	padding:0 0.5em;
+}
+.left h1 {
+	font-size:2em;
+	margin-bottom:-0.5em;
+}
+.left h2 {
+	font-size:1.5em;
+	margin:1em 0 0 10%;
+}
+.submenu {
+	height:5em;
+	margin-left:20%;
+	overflow:auto;
+	max-width:100px;
+}
+.submenu::-webkit-scrollbar,
+.left::-webkit-scrollbar {
+    width: 7px;border-radius:50%;
+}
+.submenu::-webkit-scrollbar-track,
+.left::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 3px rgba(0,0,0,0.3);
+    border-radius:50px;
+}
+.submenu::-webkit-scrollbar-thumb,
+.left::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+  outline: 1px solid slategrey;
+  border-radius:50px;
+}
+.right {
+	flex:8;
+	height:100vh;
+	overflow:auto;
+}
+.right h1 {
+	text-align:center;
+}
+ul {
+	list-style-type:none;
+	margin:0;
+	padding:0;
+}
+table {
+	border-collapse:collapse;
+	margin:auto;
+	width:100%;
+}
+thead { border-bottom:solid 1px; }
+td, th {
+	vertical-align: top;
+	padding:1em;
+}
+td:first-child, th:first-child {
+	border-right:solid 1px;
+	width:25%;
+}
+td:last-child, th:last-child {
+	border-left:solid 1px;
+	width:25%;
+}
+td li {
+	margin-bottom:0.5em;
+}
+@media all and (min-width:1200px) {
+	.left {
+		flex:1.2;
+	}
+}
+@media all and (max-width:900px) {
+	section {
+		flex-direction: column;
+	}
+	.left {
+		height:50vh;
+	}
+	.submenu {
+		max-width:400px;
+	}
+}
