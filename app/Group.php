@@ -20,9 +20,9 @@ class Group extends Model
             if(strcmp($word, $words[0]) !== 0) {
                 $word = $words[0];
                 $subgroup = new SubGroup();
-                array_push($subgroups, $subgroup);
                 $subgroup->name = $words[0];
                 $subgroup->postcodes = [];
+                array_push($subgroups, $subgroup);
             }
             array_push($subgroup->postcodes, $postcode);
         }
